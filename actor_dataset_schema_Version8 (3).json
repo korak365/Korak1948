@@ -1,0 +1,29 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "overview": {
+            "title": "Overview",
+            "transformation": {
+                "fields": ["pinId", "title", "description", "imageUrl", "sourceUrl"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "title": {
+                        "label": "Title",
+                        "format": "text"
+                    },
+                    "imageUrl": {
+                        "label": "Image URL",
+                        "format": "link"
+                    },
+                    "sourceUrl": {
+                        "label": "Pin URL",
+                        "format": "link"
+                    }
+                }
+            }
+        }
+    }
+}

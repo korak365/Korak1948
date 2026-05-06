@@ -1,0 +1,17 @@
+{
+    "actorSpecification": 1,
+    "name": "pinterest-visual-trend-scraper",
+    "title": "Pinterest Visual Trend Scraper",
+    "description": "Scrapes Pinterest pins for fashion and interior design forecasting and downloads pin images to Key-Value store.",
+    "version": "0.0",
+    "meta": {
+        "templateId": "ai-generated-actor",
+        "generatedBy": "gpt-4o"
+    },
+    "input": "./input_schema.json",
+    "output": "./output_schema.json",
+    "storages": {
+        "dataset": "./dataset_schema.json"
+    },
+    "dockerfile": "../Dockerfile"
+}

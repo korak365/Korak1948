@@ -1,0 +1,50 @@
+{
+    "title": "Input schema of the Pinterest Visual Trend Scraper",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "startUrls": {
+            "title": "Start URLs",
+            "type": "array",
+            "description": "Pinterest boards, search results, or profile pages to start scraping (e.g., https://www.pinterest.com/search/pins/?q=fashion).",
+            "editor": "requestListSources",
+            "prefill": [
+                {
+                    "url": "https://www.pinterest.com/search/pins/?q=fashion"
+                }
+            ]
+        },
+        "maxRequestsPerCrawl": {
+            "title": "Max Requests per Crawl",
+            "type": "integer",
+            "description": "Maximum number of pages the crawler will open per run.",
+            "default": 200
+        },
+        "scrollIterations": {
+            "title": "Scroll iterations",
+            "type": "integer",
+            "description": "How many times to scroll to load more pins on feed/search pages.",
+            "default": 8
+        },
+        "authMethod": {
+            "title": "Authentication method",
+            "type": "string",
+            "description": "Set to 'cookie' to provide a Pinterest session cookie, 'credentials' for username/password login, or 'none' for unauthenticated scraping (limited).",
+            "default": "none",
+            "enum": ["none", "cookie", "credentials"]
+        },
+        "cookieString": {
+            "title": "Cookie string",
+            "type": "string",
+            "description": "If authMethod is 'cookie', paste your Pinterest session cookie here (store secrets in env vars on Cloud).",
+            "default": ""
+        },
+        "downloadImages": {
+            "title": "Download images",
+            "type": "boolean",
+            "description": "When true, the Actor downloads pin images to the Key-Value store under images/<pinId>.*",
+            "default": true
+        }
+    },
+    "required": []
+}
